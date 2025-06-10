@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <h1>Your Health Risk Prediction</h1>
+    <p><strong>Risk Level:</strong> {{ risk_level }}</p>
+    <p><strong>Prediction Score:</strong> {{ prediction }}%</p>
+    <p><strong>Recommendation:</strong> {{ recommendation }}</p>
+    <h3>Top Risk Factors:</h3>
+    <ul>
+        {% for factor in top_factors %}
+            <li>{{ factor }}</li>
+        {% endfor %}
+    </ul>
+    <p>Age: {{ age }}</p>
+    <p>BMI: {{ bmi }}</p>
+    <a href="/">Go Back</a>
+</body>
+</html>
